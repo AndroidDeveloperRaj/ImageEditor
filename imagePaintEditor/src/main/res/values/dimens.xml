@@ -1,0 +1,135 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- Splash Activity -->
+
+    <dimen name="activity_splash_imageview_height">150dp</dimen>
+    <dimen name="activity_splash_imageview_width">200dp</dimen>
+    <dimen name="activity_splash_imageview_margin_top">150dp</dimen>
+    <dimen name="activity_splash_textview_margin_top">10dp</dimen>
+    <dimen name="activity_splash_textview_text_size">27sp</dimen>
+
+    <!-- Home Activity -->
+
+    <dimen name="activity_home_header_heart_margin_left">10dp</dimen>
+    <dimen name="activity_home_header_text_margin_left">10dp</dimen>
+    <dimen name="activity_home_header_text_size">22dp</dimen>
+    <dimen name="activity_home_layots_text_size">20dp</dimen>
+
+    <!-- Drawing Activity -->
+
+    <dimen name="activity_drawing_header_text_size">22dp</dimen>
+    <dimen name="activity_drwaing_button_no_dimentions">30dp</dimen>
+    <dimen name="activity_drwaing_button_no_margin_left">5dp</dimen>
+    <dimen name="activity_drwaing_textView_no_margin_left">40dp</dimen>
+    <dimen name="activity_drwaing_button_share_dimentions">35dp</dimen>
+    <dimen name="activity_drwaing_button_share_margin_left">15dp</dimen>
+    <dimen name="activity_drwaing_button_ok_dimentions">35dp</dimen>
+    <dimen name="activity_drwaing_button_ok_margin_left">8dp</dimen>
+    <dimen name="activity_drwaing_relativeLayout_padding">15dp</dimen>
+    <dimen name="activity_drwaing_option_images_dimentions">25dp</dimen>
+    <dimen name="activity_drawing_textview_text_size">22dp</dimen>
+    <dimen name="activity_drawing_options_parent_padding">3dp</dimen>
+    <dimen name="activity_drawing_options_margins">3dp</dimen>
+    <dimen name="activity_drawing_options_paddings">5dp</dimen>
+    <dimen name="activity_drawing_frameView_width">120dp</dimen>
+    <dimen name="activity_drawing_frameView_height">57dp</dimen>
+    <dimen name="activity_drawing_frameView_margin_bottom">55dp</dimen>
+    <dimen name="activity_drawing_frameView_margin_left">105dp</dimen>
+    <dimen name="activity_drawing_frameView_padding">3dp</dimen>
+    <dimen name="activity_drawing_frameView_margin">5dp</dimen>
+    <dimen name="activity_drawing_penView_width">110dp</dimen>
+    <dimen name="activity_drawing_penView_padding">3dp</dimen>
+    <dimen name="activity_drawing_option_BG_text_size">10dp</dimen>
+
+
+    <!-- NumberPicker Dialog -->
+
+    <dimen name="dialog_np_height">230dp</dimen>
+    <dimen name="dialog_np_numberPicker_height">180dp</dimen>
+    <dimen name="dialog_np_buttons_height">50dp</dimen>
+    <dimen name="dialog_np_buttons_text_size">13sp</dimen>
+
+
+    <!-- Confirmation Dialog -->
+
+    <dimen name="dialog_confirmation_height">150dp</dimen>
+    <dimen name="dialog_confirmation_width">300dp</dimen>
+    <dimen name="dialog_confirmation_text_size">15sp</dimen>
+    <dimen name="dialog_confirmation_linlayout_padding_top">1dp</dimen>
+    <dimen name="dialog_confirmation_btnYes_margin_left">1dp</dimen>
+
+    <!-- Filter Activity -->
+
+    <dimen name="activity_filter_textView_no_margin_left">40dp</dimen>
+    <dimen name="activity_filter_textview_text_size">20sp</dimen>
+    <dimen name="activity_filter_button_share_margin_left">15dp</dimen>
+    <dimen name="activity_filter_button_ok_margin_left">8dp</dimen>
+    <dimen name="activity_filter_option_images_dimentions">25dp</dimen>
+    <dimen name="activity_filter_buttons_text_size">9sp</dimen>
+    <dimen name="activity_filter_options_parent_padding">3dp</dimen>
+    <dimen name="activity_filter_options_margins">3dp</dimen>
+    <dimen name="activity_filter_options_paddings">3dp</dimen>
+    <dimen name="activity_filter_seekBar_paddings">16dp</dimen>
+    <dimen name="activity_filter_seekBar_margin_bottom">60dp</dimen>
+    <dimen name="activity_filter_scrollview_margin_bottom">60dp</dimen>
+    <dimen name="activity_filter_scrollview_linearLayout_padding">5dp</dimen>
+    <dimen name="activity_filter_scrollview_linearLayout_imgs_margin_right">5dp</dimen>
+    <dimen name="activity_filter_scrollview_imgs_height">55dp</dimen>
+    <dimen name="activity_filter_scrollview_imgs_width">50dp</dimen>
+    <dimen name="activity_filter_scrollview_images_padding">2dp</dimen>
+    <dimen name="activity_filter_cropImageView_height">300dp</dimen>
+    <dimen name="activity_filter_cropView_buttons_txtSize">20sp</dimen>
+    <dimen name="activity_filter_cropView_buttons_paddings">10dp</dimen>
+    <dimen name="activity_filter_cropView_buttons_margin_left">15dp</dimen>
+    <dimen name="activity_filter_rotationView_width">105dp</dimen>
+    <dimen name="activity_filter_rotationView_margin_bottom">60dp</dimen>
+    <dimen name="activity_filter_rotationView_padding">15dp</dimen>
+    <dimen name="activity_filter_rotationView_margin">15dp</dimen>
+    <dimen name="activity_filter_flipView_width">150dp</dimen>
+    <dimen name="activity_filter_flipView_margin_bottom">60dp</dimen>
+    <dimen name="activity_filter_flipView_margin_left">55dp</dimen>
+    <dimen name="activity_filter_flipView_padding">15dp</dimen>
+    <dimen name="activity_filter_flipView_margin">15dp</dimen>
+    <dimen name="activity_filter_type_textview_text_size">80sp</dimen>
+
+    <!-- Text Dialog -->
+
+    <dimen name="dialog_text_textview_text_size">30sp</dimen>
+    <dimen name="dialog_text_edittext_text_size">20sp</dimen>
+    <dimen name="dialog_text_textview_padding_left">10dp</dimen>
+    <dimen name="dialog_text_edittext_padding_left">8dp</dimen>
+    <dimen name="dialog_text_gridview_vertical_spacing">15dp</dimen>
+    <dimen name="dialog_text_linear_padding">5dp</dimen>
+    <dimen name="dialog_text_linear_button_margin_right">5dp</dimen>
+
+
+    <!-- Text Activity -->
+
+    <dimen name="activity_text_base_line_view_height">1dp</dimen>
+    <dimen name="activity_text_base_line_view_margin_top">8dp</dimen>
+    <dimen name="activity_text_base_line_view_margin_right">5dp</dimen>
+    <dimen name="activity_text_textView_height">55dp</dimen>
+
+    <!-- item type -->
+
+    <dimen name="list_item_textView_type_size">22sp</dimen>
+    <dimen name="list_item_textView_name_size">16sp</dimen>
+    <dimen name="list_item_textView_name_margin_left">20dp</dimen>
+
+    <!-- Setting Dialog -->
+
+    <dimen name="dialog_setting_textviews_padding">10dp</dimen>
+    <dimen name="dialog_setting_header_text_size">30dp</dimen>
+
+    <!-- common dimensions -->
+
+    <dimen name="zero_dp">0dp</dimen>
+    <dimen name="activity_option_layouts_text_size">13dp</dimen>
+    <dimen name="right_margin">5dp</dimen>
+    <dimen name="icon_paddings">10dp</dimen>
+
+</resources>

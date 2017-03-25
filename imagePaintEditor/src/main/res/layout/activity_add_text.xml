@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linAdView">
+
+        <LinearLayout
+            android:id="@+id/linHeaderView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_black_strip"
+            android:gravity="center_vertical"
+            android:padding="@dimen/dialog_text_textview_padding_left">
+
+            <ImageView
+                android:id="@+id/imgCross"
+                android:layout_width="@dimen/zero_dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:padding="@dimen/icon_paddings"
+                android:layout_weight="1"
+                android:src="@drawable/selector_cross_button" />
+
+            <com.app.imagecreator.customviews.CustomTextview
+                android:id="@+id/txtTitle"
+                android:layout_width="@dimen/zero_dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="3"
+                android:text="@string/add_text_screen_title"
+                android:textColor="@color/textview_color"
+                android:textSize="@dimen/activity_filter_textview_text_size" />
+
+            <ImageView
+                android:id="@+id/imgOk"
+                android:layout_width="@dimen/zero_dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginLeft="@dimen/activity_filter_button_ok_margin_left"
+                android:layout_weight="1"
+                android:padding="@dimen/icon_paddings"
+                android:src="@drawable/selector_done_button" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/grandParent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/linHeaderView">
+
+            <FrameLayout
+                android:id="@+id/parent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imgWithText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY" />
+            </FrameLayout>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/txtUserText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="test"
+            android:textSize="@dimen/activity_filter_type_textview_text_size"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linAdView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone">
+
+        <include layout="@layout/view_ad_mob" />
+    </LinearLayout>
+
+</RelativeLayout>

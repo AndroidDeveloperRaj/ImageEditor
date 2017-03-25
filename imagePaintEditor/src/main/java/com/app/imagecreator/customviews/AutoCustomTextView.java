@@ -18,7 +18,7 @@ public class AutoCustomTextView extends
     }
 
     private void init() {
-        Typeface typeface = Typeface.createFromAsset(getContext().getAssets(), "AshleyScriptMTStd.otf");
+        Typeface typeface = Typeface.createFromAsset(getContext().getAssets(), "Roboto-Regular.ttf");
         setTypeface(typeface);
     }
 }

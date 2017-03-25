@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dialog_confirmation_width"
+    android:layout_height="@dimen/dialog_confirmation_height"
+    android:layout_gravity="center"
+    android:background="@color/dialogs_BG_color"
+    android:orientation="vertical"
+    android:weightSum="3">
+
+    <com.app.imagecreator.customviews.CustomTextview
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/zero_dp"
+        android:layout_weight="2"
+        android:background="@color/dialogs_compoents_BG_color"
+        android:gravity="center"
+        android:text="@string/confirmation_text"
+        android:textColor="@color/textview_color"
+        android:textSize="@dimen/dialog_confirmation_text_size" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/zero_dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dialog_confirmation_linlayout_padding_top"
+        android:weightSum="3">
+
+
+        <com.app.imagecreator.customviews.CustomButton
+            android:id="@+id/btnCancel"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@color/dialogs_compoents_BG_color"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textColor="@color/textview_color"
+            android:textSize="@dimen/dialog_confirmation_text_size" />
+
+        <com.app.imagecreator.customviews.CustomButton
+            android:id="@+id/btnNo"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/dialog_confirmation_btnYes_margin_left"
+            android:layout_weight="1"
+            android:background="@color/dialogs_compoents_BG_color"
+            android:gravity="center"
+            android:text="@string/confirmation_no"
+            android:textColor="@color/textview_color"
+            android:textSize="@dimen/dialog_confirmation_text_size" />
+
+
+        <com.app.imagecreator.customviews.CustomButton
+            android:id="@+id/btnYes"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/dialog_confirmation_btnYes_margin_left"
+            android:layout_weight="1"
+            android:background="@color/dialogs_compoents_BG_color"
+            android:gravity="center"
+            android:text="@string/confirmation_yes"
+            android:textColor="@color/textview_color"
+            android:textSize="@dimen/dialog_confirmation_text_size" />
+    </LinearLayout>
+
+</LinearLayout>

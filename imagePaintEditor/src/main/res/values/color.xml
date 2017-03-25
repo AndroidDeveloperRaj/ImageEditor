@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#14aed9</color>
+    <color name="colorPrimaryDark">#0ebee8</color>
+    <color name="colorAccent">#fc5a7d</color>
+
+    <item name="BG_color" type="color">#000000</item>
+    <item name="textview_color" type="color">#FFFFFF</item>
+    <item name="textview_color_normal" type="color">#FFFFFF</item>
+    <item name="textview_color_pressed" type="color">#CCCCCC</item>
+    <item name="activity_drawing_realtiveLayout_bg_color" type="color">#323232</item>
+    <item name="activity_drawing_imageView_bg_color" type="color">#FFFFFF</item>
+    <item name="activity_drawing_bunttons_pressed" type="color">#CC000000</item>
+    <item name="activity_drawing_bunttons_normal" type="color">#000000</item>
+    <item name="gallery_layout_pressed" type="color">#CCfcac31</item>
+    <item name="gallery_layout_normal" type="color">#fcac31</item>
+    <item name="camera_layout_pressed" type="color">#CCaad94b</item>
+    <item name="camera_layout_normal" type="color">#aad94b</item>
+    <item name="white_bg_layout_pressed" type="color">#CC67b5e6</item>
+    <item name="white_bg_layout_normal" type="color">#67b5e6</item>
+    <item name="rate_me_layout_pressed" type="color">#CCef665e</item>
+    <item name="rate_me_layout_normal" type="color">#ef665e</item>
+    <item name="np_bunttons_pressed" type="color">#34BBED</item>
+    <item name="np_bunttons_normal" type="color">#FFFFFF</item>
+    <item name="np_background" type="color">#34BBED</item>
+    <item name="np_layout_background" type="color">#CDCDCD</item>
+    <item name="save_bunttons_pressed" type="color">#E6404040</item>
+    <item name="save_bunttons_normal" type="color">#404040</item>
+    <item name="dialogs_BG_color" type="color">#FFFFFF</item>
+    <item name="dialogs_compoents_BG_color" type="color">#404040</item>
+    <item name="cropView_BG_color" type="color">#000000</item>
+    <item name="dialog_text_BG_color" type="color">#FFFFFF</item>
+    <item name="dialog_text_textview_BG_color" type="color">#1B1B1B</item>
+    <item name="dialog_text_textview_text_color" type="color">#333333</item>
+    <item name="dialog_text_buttons_BG_color" type="color">#27292C</item>
+    <item name="activity_filter_effects_BG_color" type="color">#63B6E7</item>
+    <item name="left_side_button_normal" type="color">#FF5B5B</item>
+    <item name="left_side_button_pressed" type="color">#AE4040</item>
+    <item name="right_side_button_normal" type="color">#A2CD47</item>
+    <item name="right_side_button_pressed" type="color">#719032</item>
+    <item name="activity_text_Layout_BG_color" type="color">#333333</item>
+    <item name="dialog_setting_textviews_BG_color" type="color">#FFFFFF</item>
+    <item name="dialog_setting_textviews_text_color" type="color">#000000</item>
+
+    <color name="pagination_on">#67b5e6</color>
+    <color name="pagination_off">#CBC6C1</color>
+    <color name="transpernt">#00000000</color>
+
+</resources>

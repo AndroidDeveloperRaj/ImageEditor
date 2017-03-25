@@ -1,0 +1,24 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/imgSplash"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_splash" />
+
+    <com.app.imagecreator.customviews.CustomTextview
+        android:id="@+id/txtSplash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgSplash"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/activity_splash_textview_margin_top"
+        android:text="Photo Maker"
+        android:textSize="@dimen/activity_splash_textview_text_size" />
+
+</RelativeLayout>

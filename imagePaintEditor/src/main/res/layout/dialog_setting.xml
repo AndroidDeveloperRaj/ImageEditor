@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:background="@drawable/bg_dialog_title_strip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_home_header_heart_margin_left"
+            android:src="@drawable/ic_heart" />
+
+        <com.app.imagecreator.customviews.CustomTextview
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_home_header_text_margin_left"
+            android:text="@string/settings"
+            android:textColor="@color/textview_color"
+            android:textSize="@dimen/dialog_setting_header_text_size"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <com.app.imagecreator.customviews.CustomTextview
+        android:id="@+id/txtRateMe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dialog_setting_textviews_BG_color"
+        android:gravity="center_vertical"
+        android:padding="@dimen/dialog_setting_textviews_padding"
+        android:text="@string/home_button_rate_me"
+        android:textSize="@dimen/activity_home_header_text_size"
+        android:textColor="@color/selector_textview_text_color" />
+
+    <View
+        android:id="@+id/viewBaseLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_text_base_line_view_height"
+        android:layout_toLeftOf="@+id/relColorPicker"
+        android:background="@color/dialog_text_textview_text_color" />
+
+    <com.app.imagecreator.customviews.CustomTextview
+        android:id="@+id/txtRemoveAds"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dialog_setting_textviews_BG_color"
+        android:gravity="center_vertical"
+        android:padding="@dimen/dialog_setting_textviews_padding"
+        android:text="@string/remove_ads"
+        android:textSize="@dimen/activity_home_header_text_size"
+        android:textColor="@color/selector_textview_text_color" />
+
+    <View
+        android:id="@+id/viewBaseLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_text_base_line_view_height"
+        android:layout_toLeftOf="@+id/relColorPicker"
+        android:background="@color/dialog_text_textview_text_color" />
+
+    <com.app.imagecreator.customviews.CustomTextview
+        android:id="@+id/txtCancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dialog_setting_textviews_BG_color"
+        android:gravity="center_vertical|right"
+        android:padding="@dimen/dialog_setting_textviews_padding"
+        android:text="@string/cancel"
+        android:textSize="@dimen/activity_home_header_text_size"
+        android:textColor="#3F7F7F" />
+
+</LinearLayout>

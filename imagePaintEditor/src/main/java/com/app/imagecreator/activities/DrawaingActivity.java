@@ -3,6 +3,7 @@ package com.app.imagecreator.activities;
 import android.app.Activity;
 import android.app.Dialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -13,7 +14,9 @@ import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.MediaStore;
+import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -28,7 +31,6 @@ import com.app.imagecreator.PaintApplication;
 import com.app.imagecreator.dialogs.ColorPickerDialog;
 import com.app.imagecreator.dialogs.ColorPickerDialog.OnColorDeSelectedListener;
 import com.app.imagecreator.dialogs.ColorPickerDialog.OnColorSelectedListener;
-import com.app.imagecreator.dialogs.ConfirmationDialog;
 import com.app.imagecreator.dialogs.SaveConfirmationDialog;
 import com.app.imagecreator.paintview.PaintView;
 import com.app.imagecreator.utility.Constant;
@@ -77,7 +79,7 @@ public class DrawaingActivity extends Activity implements OnClickListener,
             Random generator = new Random();
             int n = 10000;
             n = generator.nextInt(n);
-            imgName = "Image-" + n + ".jpg";
+            imgName = "Image-" + n + ".png";
         }
 
 
@@ -166,9 +168,7 @@ public class DrawaingActivity extends Activity implements OnClickListener,
 
     @Override
     public void onClick(View v) {
-
         switch (v.getId()) {
-
             case R.id.linPen:
                 if (linFrameView.getVisibility() == View.VISIBLE) {
                     hideFrameView();
@@ -190,8 +190,7 @@ public class DrawaingActivity extends Activity implements OnClickListener,
                 break;
 
             case R.id.imgCancel:
-                bitmap = Utility.convertToBitmap(relWithFrame);
-                new ConfirmationDialog(this, bitmap, imgName, 1).show();
+                onBackClick();
                 break;
 
             case R.id.imgClear:
@@ -547,8 +546,56 @@ public class DrawaingActivity extends Activity implements OnClickListener,
     @Override
     public void onBackPressed() {
         // super.onBackPressed();
+        onBackClick();
+    }
+
+    private void onBackClick() {
         bitmap = Utility.convertToBitmap(relWithFrame);
-        new ConfirmationDialog(this, bitmap, imgName, 1).show();
+        //new ConfirmationDialog(this, bitmap, imgName, 1).show();
+        showConfirmationDialog(bitmap, imgName, 1);
+    }
+
+
+    private void showConfirmationDialog(final Bitmap bitmap, final String imgName, final int id) {
+        new AlertDialog.Builder(DrawaingActivity.this)
+                .setTitle("Confirm")
+                .setMessage(R.string.confirmation_text)
+                .setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // continue with delete
+                        Utility.saveImage(bitmap, imgName, DrawaingActivity.this);
+                        if (id == 1) {
+                            callHomeActivity();
+                        } else if (id == 2) {
+                            callHomeActivity();
+                        }
+                    }
+                })
+                .setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // do nothing
+                        deleteImage();
+                        if (id == 1) {
+                            callHomeActivity();
+                        } else if (id == 2) {
+                            callHomeActivity();
+                        }
+                    }
+                })
+                .setNeutralButton("CANCEL", null)
+                .setIcon(R.drawable.ic_heart)
+                .show();
+    }
+
+    private void callHomeActivity() {
+        startActivity(new Intent(DrawaingActivity.this, HomeActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+        finish();
+    }
+
+    private void deleteImage() {
+        String path = Environment.getExternalStorageDirectory().toString() + File.separator + FOLDER_NAME + File.separator + imgName;
+        File file = new File(path);
+        file.delete();
     }
 
 }

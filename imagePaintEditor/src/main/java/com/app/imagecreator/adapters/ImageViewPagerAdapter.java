@@ -33,9 +33,8 @@ public class ImageViewPagerAdapter extends PagerAdapter
     }
 
     public int getCount() {
-        return productLists.length;
+        return productLists.length + (productLists[0] != null ? 1 : 0);
     }
-
 
     @Override
     public Object instantiateItem(View collection, final int position) {
@@ -43,7 +42,7 @@ public class ImageViewPagerAdapter extends PagerAdapter
         View convertView = inflater.inflate(R.layout.item_view_pager, null);
 
         ImageView imgViewPager = (ImageView) convertView.findViewById(R.id.imgViewPager);
-        if (productLists[position] != null) {
+        if (productLists.length > position && productLists[position] != null) {
             Utility.log("path", productLists[position]);
             File file = new File(productLists[position]);
             try {
@@ -52,7 +51,7 @@ public class ImageViewPagerAdapter extends PagerAdapter
                 e.printStackTrace();
             }
         } else {
-            imgViewPager.setImageResource(defaultImgs[position]);
+            imgViewPager.setImageResource(defaultImgs[position - (productLists[0] != null ? 1 : 0)]);
         }
         ((ViewPager) collection).addView(convertView, 0);
 

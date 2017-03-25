@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Photo Maker</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="splash_txt">Paint Your Imagination</string>
+    <string name="title_activity_drawaing">DrawaingActivity</string>
+    <string name="drawing_screen_title">Paint</string>
+    <string name="option_color">Color</string>
+    <string name="option_size">Size</string>
+    <string name="option_frame">Frame</string>
+    <string name="option_filter">Filter</string>
+    <string name="option_erase">Erase</string>
+    <string name="set_number_picker">Set</string>
+    <string name="option_pen">Pen</string>
+    <string name="toast_msg_img_saved">Image saved at</string>
+    <string name="home_button_gallary">Gallary</string>
+    <string name="home_button_camera">Camera</string>
+    <string name="home_button_paint">Paint</string>
+    <string name="home_button_rate_me">Rate Me</string>
+    <string name="title_activity_filter">FilterActivity</string>
+    <string name="filter_screen_title">Filter Image</string>
+    <string name="option_left_rotation">Rotate Left</string>
+    <string name="option_effects">Effects</string>
+    <string name="confirmation_text">Would you like to save image?</string>
+    <string name="confirmation_no">No</string>
+    <string name="confirmation_yes">yes</string>
+    <string name="ok_button">Ok</string>
+    <string name="image_is_stored_at_">"Image is stored at "</string>
+    <string name="np_title">Choose Brush Size</string>
+    <string name="option_left">Left</string>
+    <string name="option_right">Right</string>
+    <string name="option_crop">Crop</string>
+    <string name="option_brighten">Brighten</string>
+    <string name="option_type">Type</string>
+    <string name="title_activity_cropping">CroppingActivity</string>
+    <string name="cancel">Cancel</string>
+    <string name="save_crop">Save</string>
+    <string name="message_null_check_this_">Message NULL Check this.</string>
+    <string name="option_rotate">Rotate</string>
+    <string name="option_flip">Flip</string>
+    <string name="proccess_dialog_messege">Proccesing</string>
+    <string name="dialog_text_preview">Preview Text</string>
+    <string name="dialog_text_btn_color">Color</string>
+    <string name="dialog_text_btn_ok">Ok</string>
+    <string name="please_enter_text">Enter text here</string>
+    <string name="color_text">Color</string>
+    <string name="option_BG">Background</string>
+    <string name="left_rotation_option">Left</string>
+    <string name="right_rotation_option">Right</string>
+    <string name="horizontal_flip_option">Horizontal</string>
+    <string name="vertical_flip_option">Vertical</string>
+    <string name="frame_color">Color</string>
+    <string name="no_frame">No Frame</string>
+    <string name="pen_color">Color</string>
+    <string name="pen_size">Size</string>
+    <string name="title_activity_text">TextActivity</string>
+    <string name="text_screen_title">Paint Font\'s</string>
+    <string name="title_activity_add_text">AddTextActivity</string>
+    <string name="add_text_screen_title">Text</string>
+    <string name="saving_confirmation">Are you sure you want to save image?</string>
+    <!--     test -->
+    <!--     <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>  -->
+    <!--     <string name="banner_ad_unit_id">ca-app-pub-3268378535288786/7069358757</string> -->
+    <!-- live -->
+    <!--     <string name="banner_ad_unit_id">ca-app-pub-3268378535288786/3252131155</string> -->
+
+    <!--     new -->
+    <string name="banner_ad_unit_id">ca-app-pub-7619615387791740/9321864911</string>
+    <string name="interestial_ad_unit_id">ca-app-pub-7619615387791740/1798598110</string>
+
+    <string name="settings">Settings</string>
+    <string name="remove_ads">Remove Ads($2.99)</string>
+    <string name="please_enter_any_text">Please Enter any text</string>
+
+</resources>

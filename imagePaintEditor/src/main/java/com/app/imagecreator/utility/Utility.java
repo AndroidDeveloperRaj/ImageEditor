@@ -85,9 +85,7 @@ public class Utility implements Constant {
         Matrix matrix = new Matrix();
         ExifInterface exif;
         try {
-
             exif = new ExifInterface(selectedImage.getPath());
-
             int orientation = exif.getAttributeInt(
                     ExifInterface.TAG_ORIENTATION,
                     ExifInterface.ORIENTATION_NORMAL);
@@ -99,14 +97,11 @@ public class Utility implements Constant {
                 matrix.postScale((float) b.getWidth(), (float) b.getHeight());
             } else if (orientation == 8) {
                 matrix.postRotate(270);
-            } else {
             }
-
         } catch (IOException e) {
             e.printStackTrace();
         }
         return matrix;
-
     }
 
 
@@ -239,7 +234,6 @@ public class Utility implements Constant {
         FileOutputStream out;
         try {
             out = new FileOutputStream(file);
-
             finalBitmap.compress(Bitmap.CompressFormat.PNG, 100, out);
             out.flush();
             out.close();
@@ -266,11 +260,11 @@ public class Utility implements Constant {
     }
 
     public static void toast(Context context, String message) {
-        Toast.makeText(context, message, TOAST_TIME).show();
+        Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
     }
 
     public static void longToast(Context context, String message) {
-        Toast.makeText(context, message, LONG_TOAST_TIME).show();
+        Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
     }
 
     static OnDialogClick dialogClick = null;
@@ -424,8 +418,10 @@ public class Utility implements Constant {
 
     public static void loadAdd(final com.google.android.gms.ads.AdView mAdView) {
         mAdView.setVisibility(View.GONE);
-        com.google.android.gms.ads.AdRequest adRequest = new AdRequest.Builder()
-                .build();
+
+        AdRequest.Builder builder = new AdRequest.Builder();
+        builder.addTestDevice("D8531AF26FF68D8CE69D93814B59B92A");
+        com.google.android.gms.ads.AdRequest adRequest = builder.build();
         mAdView.loadAd(adRequest);
         mAdView.setAdListener(new AdListener() {
             @Override

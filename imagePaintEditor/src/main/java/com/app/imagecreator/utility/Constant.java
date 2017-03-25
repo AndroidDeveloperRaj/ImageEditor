@@ -6,7 +6,7 @@ public interface Constant {
     public static final boolean IS_DEBUG = true;
     public static final int TOAST_TIME = 1000;
     public static final int LONG_TOAST_TIME = 3000;
-    public static final String FOLDER_NAME = "Paint";
+    public static final String FOLDER_NAME = "PhotoMaker";
     public static final String PATH = "Path";
     public static final String ORIGINAL_PATH = "Original_Path";
     public static final String IMAGE_NAME = "ImageName";

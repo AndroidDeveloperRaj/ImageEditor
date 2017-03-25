@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dialog_np_height"
+    android:orientation="vertical"
+    android:showDividers="end"
+    android:divider="@color/np_background">
+
+    <NumberPicker
+        android:id="@+id/numberPickerSize"
+        android:layout_height="@dimen/dialog_np_numberPicker_height"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:divider="@color/np_background"
+        android:showDividers="end" />
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
+        android:background="@color/np_layout_background">
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_height="@dimen/dialog_np_buttons_height"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_weight="1"
+            android:text="@string/cancel"
+            android:textSize="@dimen/dialog_np_buttons_text_size"
+            android:background="@drawable/selector_dialogs_np_buttons" />
+
+        <Button
+            android:id="@+id/btnSet"
+            android:layout_height="@dimen/dialog_np_buttons_height"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_weight="1"
+            android:text="@string/set_number_picker"
+            android:textSize="@dimen/dialog_np_buttons_text_size"
+            android:background="@drawable/selector_dialogs_np_buttons"
+            android:layout_marginLeft="1dp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

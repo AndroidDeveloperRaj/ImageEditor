@@ -2,6 +2,7 @@ package com.app.imagecreator.activities;
 
 import android.app.Activity;
 import android.content.ContentValues;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
@@ -9,6 +10,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
@@ -19,7 +21,6 @@ import com.app.imagecreator.PaintApplication;
 import com.app.imagecreator.adapters.ImageViewPagerAdapter;
 import com.app.imagecreator.customviews.CirclePageIndicator;
 import com.app.imagecreator.customviews.CustomTextview;
-import com.app.imagecreator.dialogs.SettingDialog;
 import com.app.imagecreator.inapp.BillingProcessor;
 import com.app.imagecreator.inapp.BillingProcessor.IBillingHandler;
 import com.app.imagecreator.inapp.TransactionDetails;
@@ -104,6 +105,8 @@ public class HomeActivity extends Activity implements OnClickListener, Constant 
         File file = new File(path);
         allFiles = file.list();
         int i, j;
+        String latest = null;
+        long time = 0;
         if (allFiles != null) {
             for (i = 0, j = (allFiles.length - 1); i < 5
                     && j >= (allFiles.length - 5); i++, j--) {
@@ -111,12 +114,24 @@ public class HomeActivity extends Activity implements OnClickListener, Constant 
                     Utility.log("img name", allFiles[j]);
                     Utility.log("path", path + File.separator + allFiles[j]);
                     list[i] = path + File.separator + allFiles[j];
+
+                    File file1 = new File(list[i]);
+                    if (file1.exists()) {
+                        if (file1.lastModified() > time) {
+                            latest = list[i];
+                            time = file1.lastModified();
+                        }
+                    }
                     Utility.log("path", list[i]);
                 } else {
                     break;
                 }
             }
         }
+
+        list[0] = latest;
+        list[1] = list[2] = list[3] = list[4] = null;
+
         adapter = new ImageViewPagerAdapter(this, list, defaultImgs);
         viewPager.setAdapter(adapter);
         circlePageIndicator.setViewPager(viewPager);
@@ -174,7 +189,8 @@ public class HomeActivity extends Activity implements OnClickListener, Constant 
                 if (billingProcessor.isPurchased(PRODUCT_ID)) {
                     Utility.rateMe(this);
                 } else {
-                    new SettingDialog(this).show();
+                    //new SettingDialog(this).show();
+                    showSettingsDialog();
                 }
                 break;
 
@@ -281,19 +297,12 @@ public class HomeActivity extends Activity implements OnClickListener, Constant 
                 @Override
                 public void run() {
                     if (viewPager != null && viewPager.getChildCount() > 0) {
-                        if (position < list.length) {
-                            viewPager.setCurrentItem(position, true);
-                            if (circlePageIndicator != null)
-                                circlePageIndicator.setCurrentItem(position);
-                            position++;
+                        if (viewPager.getCurrentItem() + 1 < list.length) {
+                            viewPager.setCurrentItem(viewPager.getCurrentItem() + 1, true);
                         } else {
                             viewPager.setCurrentItem(0, false);
-                            if (circlePageIndicator != null)
-                                circlePageIndicator.setCurrentItem(0);
-                            position = 1;
                         }
                     }
-                    ;
                 }
             });
         }
@@ -327,7 +336,40 @@ public class HomeActivity extends Activity implements OnClickListener, Constant 
         super.onDestroy();
         if (billingProcessor != null)
             billingProcessor.release();
+    }
 
+    private void showSettingsDialog() {
+
+        String[] items = new String[2];
+        items[0] = ("Rate Me");
+        items[1] = ("Remove Ads($2.99)");
+        new AlertDialog.Builder(HomeActivity.this)
+                .setTitle("Settings")
+                //.setMessage("Are you sure you want to delete this entry?")
+//                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        // continue with delete
+//                    }
+//                })
+                .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // do nothing
+                    }
+                })
+                .setItems(items, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        if (which == 0) {
+                            Utility.rateMe(HomeActivity.this);
+                            dialog.dismiss();
+                        } else if (which == 1) {
+                            HomeActivity.billingProcessor.purchase(HomeActivity.this, PRODUCT_ID);
+                            dialog.dismiss();
+                        }
+                    }
+                })
+                .setIcon(R.drawable.ic_heart)
+                .show();
     }
 
 }

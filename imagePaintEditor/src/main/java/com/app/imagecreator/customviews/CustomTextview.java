@@ -23,7 +23,7 @@ public class CustomTextview extends TextView {
     }
 
     private void init() {
-        Typeface typeface = Typeface.createFromAsset(getContext().getAssets(), "AshleyScriptMTStd.otf");
+        Typeface typeface = Typeface.createFromAsset(getContext().getAssets(), "Roboto-Regular.ttf");
         setTypeface(typeface);
     }
 
